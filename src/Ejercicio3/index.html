@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultades Menores</title>
+    <link rel="stylesheet" href="dis.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Verificación de Aceptación en Facultades Menores</h1>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <!-- La matrícula se genera automáticamente -->
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" readonly>
+
+        <label for="carrera">Carrera:</label>
+        <!-- Cambiado a un elemento de selección (dropdown) -->
+        <select id="carrera" required>
+            <option value="Economía">Economía</option>
+            <option value="Computación">Computación</option>
+            <option value="Administración">Administración</option>
+            <option value="Contabilidad">Contabilidad</option>
+        </select>
+
+        <label for="semestre">Semestre:</label>
+        <input type="number" id="semestre" required>
+
+        <label for="promedio">Promedio:</label>
+        <input type="number" step="0.01" id="promedio" required>
+
+        <button onclick="verificarAceptacion()">Verificar Aceptación</button>
+
+        <div id="especificaciones">
+            <h2>Especificaciones para Facultades Menores:</h2>
+            <ul>
+                <li>Economía: Semestre ≥ 6 y promedio ≥ 8.8</li>
+                <li>Computación: Semestre 6 y promedio > 8.5</li>
+                <li>Administración: Semestre > 5 y promedio > 8.5</li>
+                <li>Contabilidad: Semestre 5 y promedio > 8.5</li>
+            </ul>
+        </div>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
